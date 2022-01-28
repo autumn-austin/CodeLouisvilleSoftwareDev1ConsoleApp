@@ -6,6 +6,19 @@ namespace CodeLouisvilleSoftwareDev1ConsoleApp
     {
         public static void Main(string[] args)
         {
+            MainMenu();
+            // go back to menu
+            //   go back to beginning
+            // unless choice is exit
+            //   exit application
+
+            Console.WriteLine("Press any key to exit!");
+            Console.ReadKey();
+            Console.WriteLine("Program exited");
+        }
+
+        public static void MainMenu()
+        {
             // show user a menu
             Console.WriteLine("Main Menu:");
 
@@ -19,6 +32,7 @@ namespace CodeLouisvilleSoftwareDev1ConsoleApp
             //   - reverse a string
             Console.WriteLine("4. Reverse a string");
             //  ATTEMPT ERROR HANDLING (user does something i am not expecting)
+            Console.WriteLine("5. Exit");
 
             Console.Write("Enter your choice: ");
             // ask for their choice
@@ -40,20 +54,13 @@ namespace CodeLouisvilleSoftwareDev1ConsoleApp
                 case '4':
                     Console.WriteLine("Your choice was to reverse a string");
                     break;
+                case '5':
+                    return;
                 default:
                     Console.WriteLine($"You have input the choice '{userChoice}'.");
                     Console.WriteLine("That isn't valid, try again.");
                     break;
             }
-            // go back to menu
-            //   go back to beginning
-            // unless choice is exit
-            //   exit application
-
-
-            Console.WriteLine("Press any key to exit!");
-            Console.ReadKey();
-            Console.WriteLine("Program exited");
         }
     }
 }
