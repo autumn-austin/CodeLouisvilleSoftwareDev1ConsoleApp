@@ -40,27 +40,30 @@ namespace CodeLouisvilleSoftwareDev1ConsoleApp
 
             Console.WriteLine("");
             // do their choice
-            switch (userChoice)
-            {
-                case '1':
-                    Console.WriteLine("Your choice was to add two numbers");
-                    break;
-                case '2':
-                    Console.WriteLine("Your choice was to subtract two numbers");
-                    break;
-                case '3':
-                    Console.WriteLine("Your choice was to remove whitespace from a string");
-                    break;
-                case '4':
-                    Console.WriteLine("Your choice was to reverse a string");
-                    break;
-                case '5':
-                    return;
-                default:
-                    Console.WriteLine($"You have input the choice '{userChoice}'.");
-                    Console.WriteLine("That isn't valid, try again.");
-                    break;
+            while (userChoice!= 5)
+            { switch (userChoice)
+                {
+                    case '1':
+                        Console.WriteLine("Your choice was to add two numbers");
+                        break;
+                    case '2':
+                        Console.WriteLine("Your choice was to subtract two numbers");
+                        break;
+                    case '3':
+                        Console.WriteLine("Your choice was to remove whitespace from a string");
+                        break;
+                    case '4':
+                        Console.WriteLine("Your choice was to reverse a string");
+                        break;
+                    case '5':
+                        Environment.Exit(0);
+                        break;
+                }
+               
+                MainMenu();
             }
+
         }
+
     }
 }
