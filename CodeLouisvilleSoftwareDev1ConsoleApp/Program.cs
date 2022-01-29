@@ -88,7 +88,7 @@ namespace CodeLouisvilleSoftwareDev1ConsoleApp
 
         public static void SubtractTwoNumbers()
         {
-            Console.WriteLine("Your choice was to add two numbers!");
+            Console.WriteLine("Your choice was to subtract two numbers!");
             int Number1, Number2;
             Console.Write("Please enter first number: ");
             Number1 = Convert.ToInt32(Console.ReadLine());
@@ -103,21 +103,21 @@ namespace CodeLouisvilleSoftwareDev1ConsoleApp
         public static void RemoveWhiteSpace()
         {
             Console.WriteLine("Your choice was to remove whitespace from a string!");
-            Console.Write("Enter your first name: ");
-            string firstName = Console.ReadLine();
+            Console.Write("Enter your first string: ");
+            string firstString = Console.ReadLine();
 
-            Console.Write("Enter your middle name or initial: ");
-            string middleName = Console.ReadLine();
+            Console.Write("Enter your second string: ");
+            string secondString = Console.ReadLine();
 
-            Console.Write("Enter your last name: ");
-            string lastName = Console.ReadLine();
+            Console.Write("Enter your last string: ");
+            string lastString = Console.ReadLine();
 
             Console.WriteLine();
             Console.WriteLine("You entered '{0}', '{1}', and '{2}'.",
-                            firstName, middleName, lastName);
+                            firstString, secondString, lastString);
 
-            string name = ((firstName.Trim() + " " + middleName.Trim()).Trim() + " " +
-                        lastName.Trim()).Trim();
+            string name = ((firstString.Trim() + " " + secondString.Trim()).Trim() + " " +
+                        lastString.Trim()).Trim();
             Console.WriteLine("The result is " + name + ".");
         }
 
