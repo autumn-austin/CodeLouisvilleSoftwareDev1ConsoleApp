@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace CodeLouisvilleSoftwareDev1ConsoleApp
 {
@@ -16,9 +17,6 @@ namespace CodeLouisvilleSoftwareDev1ConsoleApp
             // unless choice is exit
             //   exit application
 
-            Console.WriteLine("Press any key to exit!");
-            Console.ReadKey();
-            Console.WriteLine("Program exited");
         }
 
         public static bool MainMenu()
@@ -50,13 +48,13 @@ namespace CodeLouisvilleSoftwareDev1ConsoleApp
                     AddTwoNumbers();
                     break;
                 case '2':
-                    Console.WriteLine("Your choice was to subtract two numbers");
+                    SubtractTwoNumbers(); 
                     break;
                 case '3':
-                    Console.WriteLine("Your choice was to remove whitespace from a string");
+                    RemoveWhiteSpace();
                     break;
                 case '4':
-                    Console.WriteLine("Your choice was to reverse a string");
+                    ReverseString();
                     break;
                 case '5':
                     return false;
@@ -76,7 +74,60 @@ namespace CodeLouisvilleSoftwareDev1ConsoleApp
 
         public static void AddTwoNumbers()
         {
-            Console.WriteLine("Your choice was to add two numbers");
+            Console.WriteLine("Your choice was to add two numbers!");
+            int Number1, Number2;
+            Console.Write("Please enter first number: ");
+            Number1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Please enter second number: ");
+            Number2 = Convert.ToInt32(Console.ReadLine());
+            int Result;
+            Result = Number1 + Number2;
+            Console.WriteLine("Sum of two Numbers:" + Result.ToString());
+            Console.WriteLine("");
+        }
+
+        public static void SubtractTwoNumbers()
+        {
+            Console.WriteLine("Your choice was to add two numbers!");
+            int Number1, Number2;
+            Console.Write("Please enter first number: ");
+            Number1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Please enter second number: ");
+            Number2 = Convert.ToInt32(Console.ReadLine());
+            int Result;
+            Result = Number1 - Number2;
+            Console.WriteLine("Difference of two Numbers:" + Result.ToString());
+            Console.WriteLine("");
+        }
+
+        public static void RemoveWhiteSpace()
+        {
+            Console.WriteLine("Your choice was to remove whitespace from a string!");
+            Console.Write("Enter your first name: ");
+            string firstName = Console.ReadLine();
+
+            Console.Write("Enter your middle name or initial: ");
+            string middleName = Console.ReadLine();
+
+            Console.Write("Enter your last name: ");
+            string lastName = Console.ReadLine();
+
+            Console.WriteLine();
+            Console.WriteLine("You entered '{0}', '{1}', and '{2}'.",
+                            firstName, middleName, lastName);
+
+            string name = ((firstName.Trim() + " " + middleName.Trim()).Trim() + " " +
+                        lastName.Trim()).Trim();
+            Console.WriteLine("The result is " + name + ".");
+        }
+
+        public static void ReverseString()
+        {
+            Console.WriteLine("Your choice was to reverse a string!");
+            Console.WriteLine("Enter the string to reverse: ");
+            string name = Console.ReadLine();
+            string output = new string(name.ToCharArray().Reverse().ToArray());
+            Console.WriteLine(output);
         }
     }
 }
